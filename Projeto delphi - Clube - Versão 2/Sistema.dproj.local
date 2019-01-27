@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/11/05 22:19:19.000.008,=C:\Users\Wesley\Desktop\Delphi - Projeto\Projeto delphi - Clube - Versão 2\Unit1.pas</Transaction>
+    <Transaction>2018/11/05 22:28:01.000.588,C:\Users\Wesley\Desktop\Delphi - Projeto\Projeto delphi - Clube - Versão 2\Unit1.pas=C:\Users\Wesley\Desktop\Delphi - Projeto\Projeto delphi - Clube - Versão 2\U_cadastroD.pas</Transaction>
+    <Transaction>2018/11/05 22:28:01.000.588,C:\Users\Wesley\Desktop\Delphi - Projeto\Projeto delphi - Clube - Versão 2\Unit1.dfm=C:\Users\Wesley\Desktop\Delphi - Projeto\Projeto delphi - Clube - Versão 2\U_cadastroD.dfm</Transaction>
+    <Transaction>2018/11/06 21:09:13.000.214,=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\Unit1.pas</Transaction>
+    <Transaction>2018/11/06 21:33:47.000.465,C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\U_Reldepend.dfm=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\Unit1.dfm</Transaction>
+    <Transaction>2018/11/06 21:33:47.000.465,C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\U_Reldepend.pas=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\Unit1.pas</Transaction>
+    <Transaction>2018/11/08 23:09:16.000.661,=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\Unit1.pas</Transaction>
+    <Transaction>2018/11/08 23:23:28.000.043,C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\Unit1.dfm=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\U_Reltitular.dfm</Transaction>
+    <Transaction>2018/11/08 23:23:28.000.043,C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\Unit1.pas=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\Projeto delphi - Clube - Versão 2\U_Reltitular.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Menu_inicial.pas"/>
+    <File Path="Menu_inicial.dfm"/>
+    <File Path="U_cadastroA.pas"/>
+    <File Path="U_cadastroA.dfm"/>
+    <File Path="U_cadastroD.pas"/>
+    <File Path="U_cadastroD.dfm"/>
+    <File Path="U_entrada.pas"/>
+    <File Path="U_entrada.dfm"/>
+    <File Path="U_sistema.pas"/>
+    <File Path="U_sistema.dfm"/>
+    <File Path="U_Reldepend.pas"/>
+    <File Path="U_Reldepend.dfm"/>
+    <File Path="U_Reltitular.pas"/>
+    <File Path="U_Reltitular.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

@@ -1,0 +1,72 @@
+unit U_cadastroD;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.Client,
+  Vcl.DBCtrls, FireDAC.Comp.DataSet, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
+  Vcl.Mask, Vcl.Buttons;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Gravar: TBitBtn;
+    Alterar: TBitBtn;
+    Excluir: TButton;
+    Novo: TButton;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit5: TDBEdit;
+    DBGrid1: TDBGrid;
+    DBLookupComboBox1: TDBLookupComboBox;
+    Label4: TLabel;
+    DBLookupComboBox2: TDBLookupComboBox;
+    Query_Titular: TFDQuery;
+    Con_Dp: TFDConnection;
+    FDTransaction1: TFDTransaction;
+    TabDep: TFDTable;
+    Ds_dep: TDataSource;
+    Dt_Titular: TDataSource;
+    procedure FormShow(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+if not Con_Dp.Connected then
+       Con_Dp.Connected := True;
+if not TabDep.Active then
+       TabDep.Open;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  Query_Titular.Open();
+end;
+
+end.

@@ -1,0 +1,353 @@
+object Cadastro_dep: TCadastro_dep
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro_dep'
+  ClientHeight = 503
+  ClientWidth = 763
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 88
+    Width = 212
+    Height = 23
+    Caption = 'Matricula do Dependente'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 128
+    Width = 185
+    Height = 23
+    Caption = 'Nome do Dependente'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 171
+    Width = 169
+    Height = 23
+    Caption = 'Data de Nascimento'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 528
+    Top = 88
+    Width = 31
+    Height = 23
+    Caption = 'CPF'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 528
+    Top = 144
+    Width = 25
+    Height = 23
+    Caption = 'RG'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 2
+    Top = 259
+    Width = 191
+    Height = 23
+    Caption = 'Parentesco com Titular'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 21
+    Top = 0
+    Width = 518
+    Height = 58
+    Caption = 'Cadastro dependente'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 2
+    Top = 216
+    Width = 59
+    Height = 23
+    Caption = ' Titular'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Gravar: TBitBtn
+    Left = 8
+    Top = 455
+    Width = 75
+    Height = 25
+    Caption = 'Gravar'
+    TabOrder = 0
+  end
+  object Alterar: TBitBtn
+    Left = 123
+    Top = 456
+    Width = 75
+    Height = 25
+    Caption = 'Alterar'
+    TabOrder = 1
+  end
+  object Excluir: TButton
+    Left = 350
+    Top = 455
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 2
+  end
+  object Novo: TButton
+    Left = 232
+    Top = 455
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 3
+  end
+  object DBEdit1: TDBEdit
+    Left = 226
+    Top = 93
+    Width = 169
+    Height = 21
+    DataField = 'MAT_DEPENDENTE'
+    DataSource = Ds_dep
+    TabOrder = 4
+  end
+  object DBEdit2: TDBEdit
+    Left = 226
+    Top = 133
+    Width = 169
+    Height = 21
+    DataField = 'NOME_DEPENDENTE'
+    DataSource = Ds_dep
+    TabOrder = 5
+  end
+  object DBEdit3: TDBEdit
+    Left = 226
+    Top = 176
+    Width = 169
+    Height = 21
+    DataField = 'NASC_DEPENDENTE'
+    DataSource = Ds_dep
+    TabOrder = 6
+  end
+  object DBEdit4: TDBEdit
+    Left = 559
+    Top = 149
+    Width = 169
+    Height = 21
+    DataField = 'RG_DEPENDENTE'
+    DataSource = Ds_dep
+    TabOrder = 7
+  end
+  object DBEdit5: TDBEdit
+    Left = 565
+    Top = 93
+    Width = 169
+    Height = 21
+    DataField = 'CPF_DEPENDENTE'
+    DataSource = Ds_dep
+    TabOrder = 8
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 329
+    Width = 761
+    Height = 120
+    DataSource = Ds_dep
+    TabOrder = 9
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'MAT_DEPENDENTE'
+        Width = 111
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME_DEPENDENTE'
+        Width = 121
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NASC_DEPENDENTE'
+        Width = 117
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF_DEPENDENTE'
+        Width = 112
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'RG_DEPENDENTE'
+        Width = 116
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'MAT_TITULAR'
+        Title.Caption = 'TITULAR'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PARENTESCO_TITULAR'
+        Width = 119
+        Visible = True
+      end>
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 226
+    Top = 261
+    Width = 169
+    Height = 21
+    DataField = 'ID_PARENTESCO'
+    DataSource = Ds_Paren
+    KeyField = 'ID_PARENTESCO'
+    ListField = 'PARENTESCO'
+    ListSource = Ds_par
+    TabOrder = 10
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 226
+    Top = 218
+    Width = 169
+    Height = 21
+    DataField = 'MAT_TITULAR'
+    DataSource = Ds_dep
+    KeyField = 'MAT_TITULAR'
+    ListField = 'NOME_TITULAR'
+    ListSource = Dt_Titular
+    TabOrder = 11
+  end
+  object Query_Titular: TFDQuery
+    Connection = Con_Dp
+    Transaction = FDTransaction1
+    SQL.Strings = (
+      'select mat_titular,nome_titular from ficha_associado'
+      'order by nome_titular')
+    Left = 528
+    Top = 216
+  end
+  object Con_Dp: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Wesley\Desktop\Delphi - Projeto - Clube final\' +
+        'Projeto delphi - Clube - Vers'#227'o 2\Banco de dados\CLUBE.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Transaction = FDTransaction1
+    Left = 544
+    Top = 32
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = Con_Dp
+    Left = 592
+    Top = 32
+  end
+  object TabDep: TFDTable
+    IndexFieldNames = 'MAT_DEPENDENTE'
+    Connection = Con_Dp
+    Transaction = FDTransaction1
+    UpdateOptions.UpdateTableName = 'FICHA_DEPENDENTES'
+    TableName = 'FICHA_DEPENDENTES'
+    Left = 648
+    Top = 32
+  end
+  object Ds_dep: TDataSource
+    DataSet = TabDep
+    Left = 704
+    Top = 32
+  end
+  object Dt_Titular: TDataSource
+    DataSet = Query_Titular
+    Left = 592
+    Top = 224
+  end
+  object Query_Paren: TFDQuery
+    Connection = Con_Dp
+    Transaction = FDTransaction1
+    SQL.Strings = (
+      'select id_parentesco, parentesco from parentesco'
+      'order by parentesco')
+    Left = 528
+    Top = 272
+  end
+  object Ds_Paren: TDataSource
+    DataSet = Query_Paren
+    Left = 592
+    Top = 272
+  end
+  object TabPar: TFDTable
+    Filtered = True
+    IndexFieldNames = 'ID_PARENTESCO'
+    Connection = Con_Dp
+    Transaction = FDTransaction1
+    UpdateOptions.UpdateTableName = 'PARENTESCO'
+    TableName = 'PARENTESCO'
+    Left = 648
+    Top = 224
+  end
+  object Ds_par: TDataSource
+    DataSet = TabPar
+    Left = 704
+    Top = 224
+  end
+end

@@ -1,0 +1,22 @@
+program Sistema;
+
+uses
+  Vcl.Forms,
+  U_entrada in 'U_entrada.pas' {Entrada},
+  Menu_inicial in 'Menu_inicial.pas' {login},
+  U_sistema in 'U_sistema.pas' {Estoque},
+  U_cadastroA in 'U_cadastroA.pas' {Cadastro_A},
+  Udm in 'Udm.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TEntrada, Entrada);
+  Application.CreateForm(Tlogin, login);
+  Application.CreateForm(TEstoque, Estoque);
+  Application.CreateForm(TCadastro_A, Cadastro_A);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

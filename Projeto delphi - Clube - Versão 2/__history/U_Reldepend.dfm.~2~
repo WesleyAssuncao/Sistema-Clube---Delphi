@@ -1,0 +1,122 @@
+object Rel_depen: TRel_depen
+  Left = 0
+  Top = 0
+  Caption = 'Rel_depen'
+  ClientHeight = 465
+  ClientWidth = 756
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RLReport1: TRLReport
+    Left = 8
+    Top = 8
+    Width = 794
+    Height = 1123
+    Borders.Sides = sdCustom
+    Borders.DrawLeft = False
+    Borders.DrawTop = False
+    Borders.DrawRight = False
+    Borders.DrawBottom = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 64
+      BandType = btHeader
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 102
+      Width = 718
+      Height = 51
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+      object RLLabel2: TRLLabel
+        Left = 19
+        Top = 19
+        Width = 61
+        Height = 16
+        Caption = 'Matricula '
+      end
+      object RLLabel3: TRLLabel
+        Left = 190
+        Top = 16
+        Width = 77
+        Height = 16
+        Caption = 'Nome Titular'
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 153
+      Width = 718
+      Height = 102
+      object RLDBText1: TRLDBText
+        Left = 19
+        Top = 56
+        Width = 126
+        Height = 16
+        DataField = 'MAT_DEPENDENTE'
+        DataSource = DsRel
+        Text = ''
+      end
+      object RLDBText2: TRLDBText
+        Left = 190
+        Top = 56
+        Width = 138
+        Height = 16
+        DataField = 'NOME_DEPENDENTE'
+        DataSource = DsRel
+        Text = ''
+      end
+    end
+    object RLLabel1: TRLLabel
+      Left = 41
+      Top = 64
+      Width = 153
+      Height = 16
+      Caption = 'Relatorio de Dependentes'
+    end
+    object RLBand4: TRLBand
+      Left = 38
+      Top = 255
+      Width = 718
+      Height = 94
+      BandType = btFooter
+    end
+  end
+  object Query_rel: TFDQuery
+    Active = True
+    Connection = Cadastro_dep.Con_Dp
+    Transaction = Cadastro_dep.FDTransaction1
+    SQL.Strings = (
+      'select mat_dependente,nome_dependente from ficha_dependentes'
+      'order by nome_dependente')
+    Left = 456
+    Top = 408
+  end
+  object DsRel: TDataSource
+    DataSet = Query_rel
+    Left = 544
+    Top = 408
+  end
+end

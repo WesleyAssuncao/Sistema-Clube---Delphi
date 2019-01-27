@@ -1,0 +1,39 @@
+unit U_sistema;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.jpeg, Vcl.ExtCtrls,
+  Vcl.Menus, Vcl.StdCtrls;
+
+type
+  TEstoque = class(TForm)
+    MainMenu1: TMainMenu;
+    Arquivo: TMenuItem;
+    Image1: TImage;
+    Sair1: TMenuItem;
+    Sair2: TMenuItem;
+    CadastrarAssociado1: TMenuItem;
+    CadastrarDependente1: TMenuItem;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Estoque: TEstoque;
+
+implementation
+
+{$R *.dfm}
+
+procedure TEstoque.Button1Click(Sender: TObject);
+begin
+Estoque.Destroy;
+
+end;
+
+end.

@@ -1,0 +1,100 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 465
+  ClientWidth = 756
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RLReport1: TRLReport
+    Left = 8
+    Top = 8
+    Width = 794
+    Height = 1123
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 64
+      BandType = btHeader
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 102
+      Width = 718
+      Height = 69
+      BandType = btColumnHeader
+      object RLDraw1: TRLDraw
+        Left = 0
+        Top = -22
+        Width = 697
+        Height = 48
+        DrawKind = dkLine
+      end
+      object RLLabel2: TRLLabel
+        Left = 3
+        Top = 24
+        Width = 61
+        Height = 16
+        Caption = 'Matricula '
+      end
+      object RLLabel3: TRLLabel
+        Left = 183
+        Top = 24
+        Width = 77
+        Height = 16
+        Caption = 'Nome Titular'
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 171
+      Width = 718
+      Height = 102
+      object RLDBText1: TRLDBText
+        Left = 3
+        Top = 32
+        Width = 126
+        Height = 16
+        DataField = 'MAT_DEPENDENTE'
+        DataSource = Cadastro_dep.Ds_dep
+        Text = ''
+      end
+      object RLDBText2: TRLDBText
+        Left = 183
+        Top = 32
+        Width = 138
+        Height = 16
+        DataField = 'NOME_DEPENDENTE'
+        DataSource = Cadastro_dep.Ds_dep
+        Text = ''
+      end
+    end
+    object RLLabel1: TRLLabel
+      Left = 41
+      Top = 64
+      Width = 153
+      Height = 16
+      Caption = 'Relatorio de Dependentes'
+    end
+    object RLBand4: TRLBand
+      Left = 38
+      Top = 273
+      Width = 718
+      Height = 94
+      BandType = btFooter
+    end
+  end
+end

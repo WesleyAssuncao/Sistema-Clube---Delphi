@@ -1,0 +1,383 @@
+object Cadastro_A: TCadastro_A
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'Cadastro de Associado'
+  ClientHeight = 488
+  ClientWidth = 801
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 88
+    Width = 190
+    Height = 23
+    Caption = 'Matricula do Associado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 421
+    Top = 88
+    Width = 163
+    Height = 23
+    Caption = 'Nome do Associado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 136
+    Width = 169
+    Height = 23
+    Caption = 'Data de Nascimento'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 436
+    Top = 232
+    Width = 40
+    Height = 23
+    Caption = 'Sexo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 237
+    Width = 94
+    Height = 23
+    Caption = 'Estado Civil'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 296
+    Width = 31
+    Height = 23
+    Caption = 'CPF'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 436
+    Top = 291
+    Width = 25
+    Height = 23
+    Caption = 'RG'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 421
+    Top = 136
+    Width = 79
+    Height = 23
+    Caption = 'Endere'#231'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 192
+    Width = 72
+    Height = 23
+    Caption = 'Telefone'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 431
+    Top = 187
+    Width = 45
+    Height = 23
+    Caption = 'Email'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 21
+    Top = 0
+    Width = 544
+    Height = 58
+    Caption = 'Cadastro de Associado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Gravar: TBitBtn
+    Left = 8
+    Top = 455
+    Width = 75
+    Height = 25
+    Caption = 'Gravar'
+    TabOrder = 0
+    OnClick = GravarClick
+  end
+  object Alterar: TBitBtn
+    Left = 123
+    Top = 456
+    Width = 75
+    Height = 25
+    Caption = 'Alterar'
+    TabOrder = 1
+    OnClick = AlterarClick
+  end
+  object Excluir: TButton
+    Left = 350
+    Top = 455
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 2
+    OnClick = ExcluirClick
+  end
+  object Novo: TButton
+    Left = 232
+    Top = 455
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 3
+    OnClick = NovoClick
+  end
+  object DBEdit1: TDBEdit
+    Left = 216
+    Top = 93
+    Width = 169
+    Height = 21
+    DataField = 'MATRICULA'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object DBEdit2: TDBEdit
+    Left = 600
+    Top = 93
+    Width = 169
+    Height = 21
+    DataField = 'NOME'
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object DBEdit3: TDBEdit
+    Left = 216
+    Top = 141
+    Width = 169
+    Height = 21
+    DataField = 'DATA_NASC'
+    DataSource = DataSource1
+    TabOrder = 6
+  end
+  object DBEdit4: TDBEdit
+    Left = 600
+    Top = 141
+    Width = 169
+    Height = 21
+    DataField = 'ENDERECO'
+    DataSource = DataSource1
+    TabOrder = 7
+  end
+  object DBEdit5: TDBEdit
+    Left = 216
+    Top = 192
+    Width = 169
+    Height = 21
+    DataField = 'TELEFONE'
+    DataSource = DataSource1
+    TabOrder = 8
+  end
+  object DBEdit6: TDBEdit
+    Left = 600
+    Top = 192
+    Width = 169
+    Height = 21
+    DataField = 'EMAIL'
+    DataSource = DataSource1
+    TabOrder = 9
+  end
+  object DBEdit7: TDBEdit
+    Left = 216
+    Top = 237
+    Width = 169
+    Height = 21
+    DataField = 'ESTADO_CIVIL'
+    DataSource = DataSource1
+    TabOrder = 10
+  end
+  object DBEdit8: TDBEdit
+    Left = 600
+    Top = 237
+    Width = 169
+    Height = 21
+    DataField = 'SEXO'
+    DataSource = DataSource1
+    TabOrder = 11
+  end
+  object DBEdit9: TDBEdit
+    Left = 216
+    Top = 291
+    Width = 169
+    Height = 21
+    DataField = 'CPF'
+    DataSource = DataSource1
+    TabOrder = 12
+  end
+  object DBEdit10: TDBEdit
+    Left = 600
+    Top = 291
+    Width = 169
+    Height = 21
+    DataField = 'RG'
+    DataSource = DataSource1
+    TabOrder = 13
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 325
+    Width = 761
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 14
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'MATRICULA'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DATA_NASC'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ENDERECO'
+        Title.Caption = 'ENDERE'#199'O'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TELEFONE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EMAIL'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ESTADO_CIVIL'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'SEXO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'RG'
+        Visible = True
+      end>
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = FDConnection1
+    Left = 664
+    Top = 24
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Wesley\Desktop\Delphi - Projeto\Projeto delphi' +
+        ' - Clube - Vers'#227'o 2\Banco de dados\CLUBE.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Transaction = FDTransaction1
+    Left = 608
+    Top = 24
+  end
+  object FDTable1: TFDTable
+    IndexFieldNames = 'MATRICULA'
+    Connection = FDConnection1
+    Transaction = FDTransaction1
+    UpdateOptions.UpdateTableName = 'FICHA_ASSOCIADO'
+    TableName = 'FICHA_ASSOCIADO'
+    Left = 712
+    Top = 24
+  end
+  object DataSource1: TDataSource
+    DataSet = FDTable1
+    Left = 752
+    Top = 24
+  end
+end
